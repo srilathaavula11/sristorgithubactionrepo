@@ -18,12 +18,12 @@ jobs:
    - name: ARM deployement
      uses: azure/CLI@v1
      with:
-            inlinescript: |
-             az deployment group create \ 
-             --name storageAccountDeployement \
-             --resource-group storgithubrg \
-             --template-file storagegithubsri.json \
-             --parameters storagename=stor11115
+          inlinescript: |
+           az deployment group create \ 
+           --name storageAccountDeployement \
+           --resource-group storgithubrg \
+           --template-file storagegithubsri.json \
+           --parameters storagename=stor11115
 
 
 
