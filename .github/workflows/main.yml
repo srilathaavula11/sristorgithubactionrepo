@@ -24,7 +24,7 @@ jobs:
         --name storageAccountDeployement\
         --resource-group storgithubrg\
         --template-file armgithub/storagegithubsri.json\
-        --parameters storagename=stor1111
+        --parameters storagename=stor11115
 
 
 
