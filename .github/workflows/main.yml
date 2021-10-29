@@ -1,10 +1,10 @@
 cd:[push]
 
-name:ArmDeploy
+name: AzureARMDeploy
 
 jobs:
   
- deploy:
+   deploy:
    runs-on: ubuntu-latest
    steps:
 
