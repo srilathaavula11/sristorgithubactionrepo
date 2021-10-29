@@ -1,23 +1,23 @@
 cd:[push]
 
-name: AzureARMDeploy
+ name: AzureARMDeploy
 
 jobs:
   
-   deploy:
+ deploy:
    runs-on: ubuntu-latest
    steps:
 
-   - name: Azure Login
-     uses: Azure/login@v1.4.0
+   - name: Login to Azure           
+     uses: azure/login@v1
      with:
         creds: ${{ secrets.SRI_SECRET_CRED }}
     
-        - name: Run a one-line script
+        - name: checkout source code
           uses:actions/checkout@v1
       
-        - name: Azurearmdeployement
-          uses:azure/CLI@1.0.4
+        - name: armdeployement
+          uses:azure/CLI@v1
           with:
             inlinescript: |
 
@@ -26,6 +26,3 @@ jobs:
              --resource-group storgithubrg \
              --template-file armgithub/storageaccount1.json \
              --parameters stoarageAccountType-Standard_LRS
-
-
-
