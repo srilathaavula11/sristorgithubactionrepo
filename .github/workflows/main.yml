@@ -6,7 +6,7 @@ jobs:
   
  deploy:
   runs-on: ubuntu-latest
- steps:
+  steps:
 
      - uses: azure/login@v1
        with:
@@ -20,9 +20,9 @@ jobs:
         uses:azure/CLI@v1
         with
         inlinescript: |
-        az deployment  group create\ 
-        --name storageAccountDeployement\
+        az deployment  group create \ 
+        --name storageAccountDeployement \
         --resource-group storgithubrg\
-        --template-file armgithub/storagegithubsri.json\
+        --template-file armgithub/storagegithubsri.json \
         --parameters storagename=stor11115
      
