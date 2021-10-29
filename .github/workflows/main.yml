@@ -1,0 +1,30 @@
+cd:[push]
+
+name:ArmDeploy
+
+jobs:
+  
+ deploy:
+  runs-on: ubuntu-latest
+ steps:
+
+     - uses: azure/login@v1
+       with:
+         creds: ${{ secrets.SRI_SECRET_CRED }}
+    
+        # Runs a single command using the runners shell
+      - name: Run a one-line script
+        uses:actions/checkout@v1
+      
+      - name: armdeployement
+        uses:azure/CLI@v1
+        with
+        inlinescript: |
+        az deployment  group create\ 
+        --name storageAccountDeployement\
+        --resource-group storgithubrg\
+        --template-file armgithub/storagegithubsri.json\
+        --parameters stoarageAccountType-Standard_LRS
+
+
+
