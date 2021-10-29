@@ -1,6 +1,5 @@
-cd: [push]
-
- name: AzureARMDeploy
+on: [push] 
+name: AzureARMDeploy
 
 jobs:
   
@@ -13,18 +12,18 @@ jobs:
      with:
         creds: ${{ secrets.SRI_SECRET_CRED }}
     
-        - name: checkout source code
-          uses:actions/checkout@v1
+   - name: checkout source code
+     uses: actions/checkout@v1
       
-        - name: ARM deployement
-          uses:azure/CLI@v1
-          with:
+   - name: ARM deployement
+      uses:azure/CLI@v1
+     with:
             inlinescript: |
              az deployment  group create \ 
              --name storageAccountDeployement \
              --resource-group storgithubrg \
              --template-file armgithub/storageaccount1.json \
-             --parameters storageAccountType-Standard_LRS
+             --parameters storageAccountType="11115"
 
 
 
