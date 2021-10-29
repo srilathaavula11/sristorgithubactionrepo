@@ -22,7 +22,7 @@ jobs:
         inlinescript: |
         az deployment  group create \ 
         --name storageAccountDeployement \
-        --resource-group storgithubrg\
+        --resource-group storgithubrg \
         --template-file armgithub/storagegithubsri.json \
         --parameters storagename=stor11115
      
