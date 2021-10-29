@@ -22,8 +22,8 @@ jobs:
              az deployment  group create \ 
              --name storageAccountDeployement \
              --resource-group storgithubrg \
-             --template-file armgithub/storageaccount1.json \
-             --parameters storageAccountType="11115"
+             --template-file storagegithubsri.json \
+             --parameters storageAccountname=stor11115
 
 
 
