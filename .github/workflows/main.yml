@@ -10,7 +10,7 @@ jobs:
    - name: Login to Azure           
      uses: azure/login@v1
      with:
-        creds: ${{ secrets.SRI_SECRET_CRED }}
+        creds: ${{ secrets.AZURE_CREDENTIAL}}
     
    - name: checkout source code
      uses: actions/checkout@v1
