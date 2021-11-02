@@ -21,7 +21,7 @@ jobs:
           inlinescript: |
            az deployment group create \ 
            --name storageAccountDeployement \
-           --resource-group storgithubrg \
+           --resource-group POC_DevOps_RG \
            --template-file armgithub/storagegithubsri.json \
            --parameters storagename=stor11115
 
