@@ -23,7 +23,7 @@ jobs:
            --resource-group nestrg
            --name storageAccountDeployement \
            --template-file storagegithubsri.json \
-           --parameters storagename=stor11115
+           --parameters 'storagename=stor11115'
 
 
 
