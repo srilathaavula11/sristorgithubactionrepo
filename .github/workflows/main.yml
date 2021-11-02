@@ -19,10 +19,10 @@ jobs:
      uses: azure/CLI@v1
      with:
           inlinescript: |
-           az deployment group create \ 
+           az deployment group create  
+           --resource-group POC_DevOps_RG 
            --name storageAccountDeployement \
-           --resource-group POC_DevOps_RG \
-           --template-file armgithub/storagegithubsri.json \
+           --template-file storagegithubsri.json \
            --parameters storagename=stor11115
 
 
