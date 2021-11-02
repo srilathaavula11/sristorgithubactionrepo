@@ -16,7 +16,7 @@ jobs:
      uses: actions/checkout@v1
       
    - name: ARM deployement
-     uses: azure/CLI@v1.0.4
+     uses: azure/CLI@v1
      with:
           inlinescript: |
            az deployment group create \ 
